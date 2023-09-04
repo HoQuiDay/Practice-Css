@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --primary-color: #4daf54;
+  --pink-color: #f2726a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #dadada;
+  display: flex;
+}
+.wrapper {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+.image {
+  width: 22%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.25s;
+}
+.image img:hover {
+  transform: scale(1.2);
+}
+.gallery {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: 0.25;
+}
+.gallery.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.gallery__inner {
+  height: 70%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.control {
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+}
+.prev {
+  left: 15px;
+}
+.next {
+  right: 15px;
+}
+.close {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
